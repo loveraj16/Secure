@@ -60,7 +60,6 @@ export default class Home extends Component {
         ElectionInstance: instance,
         account: accounts[0],
       });
-
       const admin = await this.state.ElectionInstance.methods.getAdmin().call();
       if (this.state.account === admin) {
         this.setState({ isAdmin: true });
